@@ -1,0 +1,162 @@
+body{
+    background-color: pink;
+    
+}
+
+h2{
+    color: purple;
+}
+
+div.round{
+    background-color: yellowgreen;
+    height: 200px;
+    width: 300px;
+    border-radius: 30px;
+
+}
+
+p.border-img{
+    border: 55px solid transparent;
+    padding: 10px;
+    border-image: url('https://www.google.com/images/branding/googlelogo/1x/googlelogo_light_color_272x92dp.png');
+}
+
+div.gradient{
+    height: 200px;
+    background-color:red;
+    background-image: linear-gradient(to right, green, yellowgreen);
+}
+
+h2.shadow{
+    text-shadow: 2px 2px white;
+}
+
+div.transition{
+    height: 100px;
+    width: 100px;
+    background: dodgerblue;
+    transition: width 2s;
+}
+
+div.transition:hover{
+    width: 300px;
+}
+
+div.animations{
+    width: 100px;
+    height: 100px;
+    background: dodgerblue;
+    animation-name: first;
+    animation-duration: 5s;
+}
+
+@keyframes first {
+    from{background: green;}
+    to{background: dodgerblue;}
+    
+}
+
+.pagination{
+    display: inline-block;
+
+}
+
+.pagination a{
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination a:hover{
+    color: red;
+}
+
+@media screen and (min-width:480px){
+    body{
+        background: green;
+    }
+}
+
+@media screen and (min-width:768px){
+    body{
+        background-color: rgb(184, 181, 181);
+    }
+}
+
+.flexbox{
+    display: flex;
+flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/*.flexbox > div{
+    background-color: #fff;
+    padding: 5px;
+    margin: 5px;
+
+}
+*/
+.right{
+    background-color: green;
+    flex: 33%;
+}
+.center{
+    background-color: yellow;
+    flex: 33%;
+}
+
+
+@media (max-width: 800px){
+    .right, .center, .left{
+        flex: 100%;
+    }
+    
+}
+
+
+*{
+    box-sizing: border-box;
+}
+.header{
+    border: 1px solid red;
+    padding:15px;
+}
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+[class*="col-"]{
+    float:left;
+    border: 1px solid red;
+    padding:15px;
+}
+
+.col-1{width: 8.33%;}
+.col-2{width: 8.33%;}
+.col-3{width: 25%;}
+.col-4{width: 8.33%;}
+.col-5{width: 8.33%;}
+.col-6{width: 8.33%;}
+.col-7{width: 8.33%;}
+.col-8{width: 8.33%;}
+.col-9{width: 25%;}
+.col-10{width: 8.33%;}
+.col-11{width: 8.33%;}
+.col-12{width: 8.33%;}
+
+
+@media only screen and (max-width: 800px){
+    [class*="col-"]{
+        width: 100%;
+    }
+    body{
+        background-color: rgb(92, 92, 164);
+    }
+    .img{
+        width: 30%;
+        height: auto;
+    }
+}
